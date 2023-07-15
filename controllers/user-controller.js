@@ -21,7 +21,7 @@ const UserController = {
         .catch(err => res.status(500).json(err));
     },
     //update user by Id
-    updateUserById(res, req) {
+    updateUserById(req, res) {
         User.findOneAndUpdate(req.params.id, req.body, { new: true })
         .then(userData => {
             if (!userData) {

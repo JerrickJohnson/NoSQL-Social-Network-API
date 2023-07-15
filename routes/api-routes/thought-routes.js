@@ -20,6 +20,6 @@ router.route('/:thoughtId').get(getThoughtsById).put(updateThoughtById).delete(d
 router.route('/:thoughtId/reactions').post(createReaction);
 
 //Define the route for DELETE reaction to a thought
-router.route('/thoughtId/reactions/:reactionId').delete(deleteReaction);
+router.route('/:thoughtId/reactions/:reactionId').delete(deleteReaction);
 
 module.exports = router;
